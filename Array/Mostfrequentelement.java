@@ -21,7 +21,7 @@ public class Mostfrequentelement {
         if (maxCount < cnt || (cnt == maxCount && val > res)){
             res = val;
             maxCount = cnt;
-        }
+        }//comment
     }
     return res;
     }
