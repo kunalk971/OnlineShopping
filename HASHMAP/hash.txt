@@ -1,0 +1,53 @@
+1. Frequency Count of Elements
+Problem: Count how many times each element appears.
+Concept: HashMap<Integer, Integer>
+
+2. Find the Most Frequent Element
+Problem: From an array, return the element that appears the most.
+
+3. Check if Two Arrays are Anagrams (Same Frequencies)
+Problem: Check if two integer arrays have same element frequencies.
+
+4. Subarray with Sum = K
+Problem: Count the number of subarrays that sum to a given value K.
+Technique: Use HashMap<Integer, Integer> to store prefix sums.
+
+🔸 Leetcode: 560. Subarray Sum Equals K
+
+5. Two Sum
+Problem: Find indices of the two numbers such that they add up to a target.
+Input: nums = [2, 7, 11, 15], target = 9
+Output: [0, 1]
+
+java
+Copy
+Edit
+Map<Integer, Integer> map = new HashMap<>();
+for (int i = 0; i < nums.length; i++) {
+    int complement = target - nums[i];
+    if (map.containsKey(complement)) {
+        return new int[] { map.get(complement), i };
+    }
+    map.put(nums[i], i);
+}
+6. Longest Subarray with Equal 0s and 1s
+Problem: Given a binary array, find the length of the longest subarray with equal 0s and 1s.
+Idea: Convert 0s to -1s and use prefix sum + HashMap.
+
+7. First Element with Frequency One
+Problem: Return the first element in array that appears only once.
+
+8. Group Elements with Same Frequency
+Problem: Group numbers that appear with same frequency in the array.
+Idea: Use HashMap<Integer, Integer> for frequency, then group in HashMap<Integer, List<Integer>>.
+
+9. Longest Consecutive Sequence
+Problem: Given an unsorted array, find the length of the longest sequence of consecutive integers.
+Input: [100, 4, 200, 1, 3, 2]
+Output: 4 (because 1,2,3,4)
+
+🔸 Use a HashSet<Integer> or HashMap<Integer, Boolean>.
+
+10. Majority Element (n/2 times)
+Problem: Find the element that appears more than n/2 times.
+Solution: HashMap for frequency or Boyer-Moore Voting Algorithm.
